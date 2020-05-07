@@ -5,6 +5,7 @@ from posts.models import Post
 
 class PostModelAdmin(admin.ModelAdmin):
     list_display = ('__unicode__', 'title','updated','timestamp')
+    #list_filter = ('title')
     class Meta:
         model = Post
         
