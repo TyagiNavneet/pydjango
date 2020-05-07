@@ -4,7 +4,8 @@ from django.contrib import admin
 from posts.models import Post
 
 class PostModelAdmin(admin.ModelAdmin):
-    list_display = ('__unicode__', 'title','updated','timestamp')
+    list_display = ['__unicode__', 'title','updated','timestamp']
+    list_display_links = ['updated']
     #list_filter = ('title')
     class Meta:
         model = Post
