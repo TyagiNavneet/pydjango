@@ -7,6 +7,7 @@ class PostModelAdmin(admin.ModelAdmin):
     list_display = ['__unicode__', 'title','updated','timestamp']
     list_display_links = ['updated']
     list_filter = ['title','updated']
+    search_fields = ["title"]
     class Meta:
         model = Post
         
